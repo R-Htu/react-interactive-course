@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React interactive course</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <button class="theme-btn" id="themeBtn" onclick="toggleTheme()">[~~]</button>
+
+<div class="wrap">
+
+  <!-- ╔══ HERO ══╗ -->
+  <div id="hero">
+    <div class="hero">
+      <div class="hero-topbar">
+        <div class="dot-row">
+          <div class="dot dot-r"></div>
+          <div class="dot dot-y"></div>
+          <div class="dot dot-g"></div>
+          <span style="margin-left:8px;letter-spacing:0.08em">XENOTERM :: SECTOR-7 :: REACT/NXJ MODULE</span>
+        </div>
+        <span class="tbright">[SYS:ONLINE] [AUTH:GRANTED] [v2.4.1]</span>
+      </div>
+      <div class="hero-body">
+        <div class="hero-sigil">
+          <span>^~^</span> INITIALIZING KNOWLEDGE MATRIX... <span>[OK]</span><br>
+          <span>|=|</span> LOADING CURRICULUM DATABASE...... <span>[OK]</span><br>
+          <span>\=/</span> SYNCHRONIZING LESSON NODES......... <span>[READY]</span>
+        </div>
+        <h1 class="glitch">
+          <span class="acid">REACT</span> <span style="color:var(--muted)">::</span> <span class="cyan">NEXT.JS</span>
+        </h1>
+        <div style="font-family:'Orbitron',monospace;font-size:0.65rem;color:var(--muted);letter-spacing:0.2em;margin-bottom:10px;text-transform:uppercase">XENOTECH ACADEMY // INTERACTIVE LEARNING TERMINAL</div>
+        <p class="hero-sub">
+          20 learning modules. 4 phases each. Points, streaks, and xenorank progression.<br>
+          Master the stack. Earn your clearance. <span class="blink" style="color:var(--acid)">_</span>
+        </p>
+        <div class="hero-ascii">
++--[REACT]--+--------+--[NEXT.JS]--+--------+
+| hooks    ++ state  ++ routing   ++ deploy |
+| context  ++ forms  ++ SSR/SSG   ++ API    |
++----------++--------++-----------++--------+</div>
+        <div class="stat-row">
+          <div class="sbox"><span class="sbox-val">20</span> MODULES</div>
+          <div class="sbox"><span class="sbox-val">60+</span> QUERIES</div>
+          <div class="sbox"><span class="sbox-val">20</span> CHALLENGES</div>
+          <div class="sbox"><span class="sbox-val">40</span> BUILDS</div>
+          <div class="sbox"><span class="sbox-val">FREE</span> ACCESS</div>
+        </div>
+        <button class="start-btn flicker" onclick="startCourse()">INITIATE SEQUENCE</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ╔══ HEADER ══╗ -->
+  <div id="hdr" class="hdr hidden">
+    <div class="brand">RNJ//ACAD</div>
+    <div class="prog-track"><div class="prog-fill" id="progFill" style="width:0%"></div></div>
+    <div class="hdr-stats">
+      <div class="hpill">PTS: <b id="hpts">0</b></div>
+      <div class="hpill">STK: <b id="hstreak">0</b></div>
+      <div class="hpill">MOD: <b id="hdone">0</b>/20</div>
+    </div>
+  </div>
+
+  <!-- ╔══ GRID ══╗ -->
+  <div id="gridWrap" class="hidden">
+    <div class="sec-label"><span class="tag">[01-10]</span> PART-1 :: REACT CORE</div>
+    <div class="grid" id="grid1"></div>
+    <div class="sec-label"><span class="tag">[11-20]</span> PART-2 :: NEXT.JS MATRIX</div>
+    <div class="grid" id="grid2"></div>
+  </div>
+
+  <!-- ╔══ LESSON VIEW ══╗ -->
+  <div id="lessonView" class="hidden">
+    <button class="back-btn" onclick="backToGrid()">BACK TO MODULE LIST</button>
+    <div class="phase-row" id="phaseTabs"></div>
+    <div class="pbox" id="phaseBox" data-coords=""></div>
+  </div>
+
+</div>
+
+</body>
+</html>
